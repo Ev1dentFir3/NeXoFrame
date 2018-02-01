@@ -47,7 +47,7 @@ if (file_exists('includes/themes/'.$theme.'/theme.php')) {
           <li id="conclaveIcon"><img class="svg" src="img/syndicates/conclave.svg"></li>
           <li id="conclaveMissionIcon"><img class="svg" src="img/navigation/conclave_missions.svg"></li>
           <li id="bountyIcon"><img class="svg" src="img/syndicates/ostrons.svg"></li>
-          <li id="voidTraderIcon"><img class="svg" src="img/baro.svg"></li>
+          <li id="voidTraderIcon"><img class="svg" src="img/misc/baro.svg"></li>
           <li id="acolyteIcon"><img class="svg" src="img/navigation/acolytes.svg"></li>
           <li id="eventIcon"><img class="svg" src="img/navigation/quests.svg"></li>
         </ul>
@@ -76,7 +76,7 @@ if (file_exists('includes/themes/'.$theme.'/theme.php')) {
             <table>
               <tr>
                 <td class="tableLeft">
-                  <span><img id="cetusHeaderIcon" class="svg" src="img/relay.svg"><?=$lang_header_cetus?></span>
+                  <span><img id="cetusHeaderIcon" class="svg" src="img/misc/relay.svg"><?=$lang_header_cetus?></span>
                 </td>
                 <td class="tableRight">
                   <span id="cetuscycleindicator"><?=$lang_info_updating?></span>: <span id="cetuscycletime"></span>
@@ -92,7 +92,7 @@ if (file_exists('includes/themes/'.$theme.'/theme.php')) {
               </tr>
               <tr>
                 <td class="tableLeft">
-                  <span><img id="earthHeaderIcon" class="svg" src="img/earth.svg"><?=$lang_header_earth?></span>
+                  <span><img id="earthHeaderIcon" class="svg" src="img/misc/earth.svg"><?=$lang_header_earth?></span>
                 </td>
                 <td class="tableRight">
                   <span id="earthcycleindicator"><?=$lang_info_updating?></span>: <span id="earthcycletime"></span>

@@ -517,12 +517,12 @@ tr.constructPanel, tr.darvoDeals {
 }
 
 #grineerConstruct:after {
-  background: <?=$color_background3?> url(../img/fomorian.png) center no-repeat;
+  background: <?=$color_background3?> url(../img/general/fomorian.png) center no-repeat;
   background-size: contain;
 }
 
 #corpusConstruct:after {
-  background: <?=$color_background3?> url(../img/razorback.png) center no-repeat;
+  background: <?=$color_background3?> url(../img/general/razorback.png) center no-repeat;
   background-size: contain;
 }
 
