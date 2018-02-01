@@ -20,7 +20,6 @@ if (file_exists('includes/themes/'.$theme.'/theme.php')) {
     <meta content="<?=$keywords?>" name="keywords">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <link href="css/main.php" rel="stylesheet" type="text/css">
-    <link href="css/jquery.scrollbar.php" rel="stylesheet" type="text/css">
     <link href="css/simple-line-icons.css" rel="stylesheet">
   </head>
   <body>
