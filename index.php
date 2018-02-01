@@ -26,7 +26,6 @@ if (file_exists('includes/themes/'.$theme.'/theme.php')) {
   <body>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min.js"></script>
-    <script src="js/jquery.scrollbar.js"></script>
     <header>
       <nav>
         <ul>
@@ -225,7 +224,7 @@ if (file_exists('includes/themes/'.$theme.'/theme.php')) {
 <script src="js/main.php" rel="javascript" type="text/javascript">></script>
 <script src="js/svg-injector.min.js"></script>
 
-<!-- nexoframe staff -->
+<!-- nexoframe stuff -->
 <script>
 function progressRender() {
   var percentageDegrees = function(p) {
