@@ -6,7 +6,7 @@
   Server Requirements:<br/>Apache 2.2+ (mod_rewrite), PHP 5.4+
 </p>
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/55b49160dffb443e8e90793f03a51017)](https://www.codacy.com/app/NeXoGone/NeXoFrame?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=WFCD/NeXoFrame&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/55b49160dffb443e8e90793f03a51017)](https://www.codacy.com/app/NeXoGone/NeXoFrame?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=WFCD/NeXoFrame&amp;utm_campaign=Badge_Grade) [![Build Status](https://travis-ci.org/WFCD/NeXoFrame.svg?branch=master)](https://travis-ci.org/WFCD/NeXoFrame)
 
 ## TODO
 - Admin Panel
