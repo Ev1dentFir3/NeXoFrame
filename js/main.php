@@ -16,14 +16,12 @@ let cetusIsDay;
 let cetusCurrentTitle;
 let cetusCurrentTitleTimezone;
 let cetusCurrentIndicator;
-let cetusCurrentIndicatorColor;
 
 // Earth timer stuff
 let earthIsDay;
 let earthCurrentTitle;
 let earthCurrentTitleTimezone;
 let earthCurrentIndicator;
-let earthCurrentIndicatorColor;
 
 // NeXoFrame functions
 $('#worldstateTabs li').on('click', function(){
@@ -100,13 +98,13 @@ function updateWorldStateTime() {
 function formatDurationShort(duration) {
   let timeText = '';
   if (duration.days()) {
-    timeText += `${duration.days()}d ${duration.hours()}h ${duration.minutes()}m ${duration.seconds()}s`;
+    timeText += `${duration.days()}<?=$lang_info_short_days?> ${duration.hours()}<?=$lang_info_short_hours?> ${duration.minutes()}<?=$lang_info_short_minutes?> ${duration.seconds()}<?=$lang_info_short_seconds?>`;
   } else if (duration.hours()) {
-    timeText += `${duration.hours()}h ${duration.minutes()}m ${duration.seconds()}s`;
+    timeText += `${duration.hours()}<?=$lang_info_short_hours?> ${duration.minutes()}<?=$lang_info_short_minutes?> ${duration.seconds()}<?=$lang_info_short_seconds?>`;
   } else if (duration.minutes()) {
-    timeText += `${duration.minutes()}m ${duration.seconds()}s`;
+    timeText += `${duration.minutes()}<?=$lang_info_short_minutes?> ${duration.seconds()}<?=$lang_info_short_seconds?>`;
   } else {
-    timeText += `${duration.seconds()}s`;
+    timeText += `${duration.seconds()}<?=$lang_info_short_seconds?>`;
   }
   return timeText;
 }
@@ -134,15 +132,13 @@ function updateDataDependencies() {
 
 function updateEarthTitle() {
   if (!earthIsDay) {
-    earthCurrentIndicator = 'Night';
-    earthCurrentIndicatorColor = 'darkblue';
-    earthCurrentTitle = 'Time until day: ';
-    earthCurrentTitleTimezone = 'Time at day: ';
+    earthCurrentIndicator = '<?=$lang_time_night?>';
+    earthCurrentTitle = '<?=$lang_time_until_day?>: ';
+    earthCurrentTitleTimezone = '<?=$lang_time_at_day?>: ';
   } else {
-    earthCurrentIndicator = 'Day';
-    earthCurrentIndicatorColor = 'orange';
-    earthCurrentTitle = 'Time until night: ';
-    earthCurrentTitleTimezone = 'Time at night: ';
+    earthCurrentIndicator = '<?=$lang_time_day?>';
+    earthCurrentTitle = '<?=$lang_time_until_night?>: ';
+    earthCurrentTitleTimezone = '<?=$lang_time_at_night?>: ';
   }
 }
 
@@ -172,12 +168,12 @@ function updateEvents() {
             const standingPanelBody = `<div class="panel-body collapse" id="standingPanelBody${job.id}" style="padding-top:0; padding-bottom:0;">${standingTable}</div>`;
 
             let standingPanelWrapper;
-            standingPanelWrapper = `<div class="panel panel-primary" style="margin-left:5%; margin-right:5%" id="${job.id}StandingPanel">`;
+            standingPanelWrapper = `<div class="panel panel-primary" style="margin-left:5%; margin-right:5%" id="${job.id}<?=$lang_info_short_seconds?>tandingPanel">`;
             standingPanelWrapper += standingPanelHeading;
             standingPanelWrapper += standingPanelBody;
             standingPanelWrapper += '</div>';
 
-            const rewardPanelHeading = `<div class="panel-heading text-center"><h3 class="panel-title"><a href="#rewardsPanelBody${job.id}" data-toggle="collapse">Rewards<span class="glyphicon glyphicon-triangle-bottom pull-right"></span></a></h3></div>`;
+            const rewardPanelHeading = `<div class="panel-heading text-center"><h3 class="panel-title"><a href="#rewardsPanelBody${job.id}" data-toggle="collapse"><?=$lang_info_rewards?><span class="glyphicon glyphicon-triangle-bottom pull-right"></span></a></h3></div>`;
             const rewardTableBody = `<tbody>${job.rewardPool.map(reward => `<tr class="text-center"><td>${reward}</tr></td>`).join('')}</tbody>`;
             const rewardTable = `<table class="table List" style="table-layout: fixed" id="${job.id}">${rewardTableBody}</table>`;
             const rewardPanelBody = `<div class="panel-body collapse" id="rewardsPanelBody${job.id}" style="padding-top:0; padding-bottom:0;">${rewardTable}</div>`;
@@ -216,15 +212,13 @@ function updateEvents() {
 
 function updateCetusTitle() {
   if (!cetusIsDay) {
-    cetusCurrentIndicator = 'Night';
-    cetusCurrentIndicatorColor = 'darkblue';
-    cetusCurrentTitle = 'Time until day: ';
-    cetusCurrentTitleTimezone = 'Time at day: ';
+    cetusCurrentIndicator = '<?=$lang_time_night?>';
+    cetusCurrentTitle = '<?=$lang_time_until_day?>: ';
+    cetusCurrentTitleTimezone = '<?=$lang_time_at_day?>: ';
   } else {
-    cetusCurrentIndicator = 'Day';
-    cetusCurrentIndicatorColor = 'orange';
-    cetusCurrentTitle = 'Time until night: ';
-    cetusCurrentTitleTimezone = 'Time at night: ';
+    cetusCurrentIndicator = '<?=$lang_time_day?>';
+    cetusCurrentTitle = '<?=$lang_time_until_night?>: ';
+    cetusCurrentTitleTimezone = '<?=$lang_time_at_night?>: ';
   }
 }
 
@@ -246,10 +240,6 @@ function updateCetusCycle() {
 
   const cycleIndicator = $('#cetuscycleindicator');
   cycleIndicator.html(cetusCurrentIndicator);
-  if (!cycleIndicator.hasClass(cetusCurrentIndicatorColor)) {
-    cycleIndicator.attr('class', cetusCurrentIndicatorColor);
-    cycleIndicator.addClass('pull-right');
-  }
 
   $('#cetuscycletitle').html(cetusCurrentTitle);
   $('#cetustimezonetitle').html(cetusCurrentTitleTimezone);
@@ -274,10 +264,6 @@ function updateEarthCycle() {
 
   const cycleIndicator = $('#earthcycleindicator');
   cycleIndicator.html(earthCurrentIndicator);
-  if (!cycleIndicator.hasClass(earthCurrentIndicatorColor)) {
-    cycleIndicator.attr('class', earthCurrentIndicatorColor);
-    cycleIndicator.addClass('pull-right');
-  }
 
   $('#earthcycletitle').html(earthCurrentTitle);
   $('#earthtimezonetitle').html(earthCurrentTitleTimezone);
@@ -434,14 +420,14 @@ function updateDarvoDeals() {
       const inventoryString = `<table class="dailyDealsInventory" id="${
         dailyDeals[0].id}">\n` +
                 '<thead>\n' +
-                '<th colspan="5"><h3>Darvo Deal</h3></th>' +
+                '<th colspan="5"><h3><?=$lang_header_darvo_deals?></h3></th>' +
                 '</thead>\n' +
                 '<tbody>\n' +
-                '<th>Item</th>' +
-                '<th>Time Left</th>' +
-                '<th>Discount</th>' +
-                '<th>Price</th>' +
-                '<th>Inventory</th>' +
+                '<th><?=$lang_market_item?></th>' +
+                '<th><?=$lang_time_left?></th>' +
+                '<th><?=$lang_market_discount?></th>' +
+                '<th><?=$lang_market_price?></th>' +
+                '<th><?=$lang_market_inventory?></th>' +
                 '<tr id="dailyDealsInventory">\n' +
                 '</tbody>\n' +
                 '</table>';
@@ -546,14 +532,14 @@ function updateAlerts() {
 
           // Check if archwing is required for mission
           if (alert.mission.archwingRequired) {
-            alertRow += '<img src="img/archwing.svg" class="archwing" height="16px" width="16px" alt="Archwing" /> ';
+            alertRow += '<img src="img/missions/archwing.svg" class="archwing" height="16px" width="16px" alt="Archwing" /> ';
           }
           if (alert.mission.nightmare) {
-            alertRow += '<img src="img/nightmare.svg" class="nightmare" height="16px" width="16px" alt="Nightmare" /> ';
+            alertRow += '<img src="img/missions/nightmare.svg" class="nightmare" height="16px" width="16px" alt="Nightmare" /> ';
           }
 
           alertRow += `<b>${alert.mission.type} - ${alert.mission.faction}</b></li>`;
-          alertRow += `<li>Reward: <img id="alertItems" src="img/general/credits.png">` + numberWithCommas(alert.mission.reward.credits);
+          alertRow += `<li><?=$lang_info_reward?>: <img id="alertItems" src="img/general/credits.png">` + numberWithCommas(alert.mission.reward.credits);
 
           if (alert.mission.reward.items.length !== 0) {
             for (const item of alert.mission.reward.items) {
@@ -588,10 +574,10 @@ function updateAlerts() {
         let alertRow = `<div id="alertsTab" class="worldstateContainer">`;
 
         if (alert.mission.archwingRequired) {
-          alertRow += '<img src="img/missions/archwing.svg" class="archwing" height="16px" width="16px" alt="Archwing" /> ';
+          alertRow += '<img src="img/missions/archwing.svg" class="archwing" height="16px" width="16px" alt="<?=$lang_mission_archwing?>" /> ';
         }
         if (alert.mission.nightmare) {
-          alertRow += '<img src="img/missions/nightmare.svg" class="nightmare" height="16px" width="16px" alt="Nightmare" /> ';
+          alertRow += '<img src="img/missions/nightmare.svg" class="nightmare" height="16px" width="16px" alt="<?=$lang_mission_nightmare?>" /> ';
         }
         alertRow += `<b>${alert.mission.node}</b> | ${alert.mission.type} (${alert.mission.faction})`;
         alertRow += `<span id="alerttimer${alert.id}" class="label timer pull-right" data-starttime="${moment(alert.activation).unix()}" ` +

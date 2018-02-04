@@ -84,7 +84,7 @@ if (file_exists('includes/themes/'.$theme.'/theme.php')) {
               </tr>
               <tr>
                 <td class="tableLeft">
-                  <span><img id="ostronsHeaderIcon" class="svg" src="img/syndicates/ostrons.svg"><?=$lang_header_ostrons_bounty?></span>
+                  <span><img id="ostronsHeaderIcon" class="svg" src="img/syndicates/ostrons.svg"><?=$lang_header_ostron_bounty?></span>
                 </td>
                 <td class="tableRight">
                   <span id="cetusbountytitle"><?=$lang_info_updating?></span> <span id="cetusbountytime"></span>

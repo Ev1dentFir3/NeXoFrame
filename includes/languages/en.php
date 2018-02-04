@@ -45,19 +45,20 @@ $lang_header_acolytes = "Acolytes";
 $lang_header_event = "Event";
 
 $lang_header_cetus = "Cetus";
-$lang_header_ostrons_bounty = "Ostron Bounty";
 $lang_header_earth = "Earth";
 $lang_header_raid = "Raid / Daily Reward";
 $lang_header_construction = "Construction Progress";
+$lang_header_darvo_deals = "Darvo Deals";
 
-$lang_info_day = "Day";
-$lang_info_at_day = "At day";
-$lang_info_until_day = "Until day";
-$lang_info_night = "Night";
-$lang_info_at_night = "At night";
-$lang_info_until_night = "Until night";
-$lang_header_start = "Start in";
-$lang_header_end = "Expire in";
+$lang_time_day = "Day";
+$lang_time_at_day = "Time at day";
+$lang_time_until_day = "Time until day";
+$lang_time_night = "Night";
+$lang_time_at_night = "Time at night";
+$lang_time_until_night = "Time until night";
+$lang_time_start = "Start in";
+$lang_time_end = "Expire in";
+$lang_time_left = "Time Left";
 
 $lang_info_short_days = "d";
 $lang_info_short_hours = "h";
@@ -73,6 +74,8 @@ $lang_info_minute = "minute";
 $lang_info_second = "second";
 
 $lang_info_levels = "Levels";
+$lang_info_reward = "Reward";
+$lang_info_rewards = "Rewards";
 $lang_info_complete = "Complele";
 
 $lang_info_trader_desc = "Void Trader";
@@ -88,6 +91,9 @@ $lang_faction_infested = "Infested";
 $lang_faction_orokin = "Orokin";
 
 $lang_syndicate_ostrons = "Ostrons";
+
+$lang_mission_archwing = "Archwing";
+$lang_mission_nightmare = "Nightmare";
 
 $lang_fissures_tier1 = "Lith Fissure";
 $lang_fissures_tier2 = "Meso Fissure";
@@ -106,10 +112,10 @@ $lang_about_clantier3 = "Storm Clan";
 $lang_about_clantier4 = "Mountain Clan";
 $lang_about_clantier5 = "Moon Clan";
 
-$lang_voidtrader_item = "Item";
-$lang_voidtrader_price = "Price";
-$lang_voidtrader_credits = "Credits";
-$lang_voidtrader_ducats = "Ducats";
+$lang_market_item = "Item";
+$lang_market_discount = "Discount";
+$lang_market_price = "Price";
+$lang_market_inventory = "Inventory";
 
 $lang_currency_platinum = "Platinum";
 $lang_currency_credits = "Credits";
@@ -136,7 +142,7 @@ $lang_admin_keywords = "Keywords";
 $lang_admin_voicechat = "Voice chat link";
 $lang_admin_voicechat_on = "Show link";
 $lang_admin_lang = "Language";
-$lang_admin_scheme = "Color scheme";
+$lang_admin_theme = "Theme";
 $lang_admin_name = "Name";
 $lang_admin_emblem = "Emblem";
 $lang_admin_rules = "Clan / Alliance Rules";

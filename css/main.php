@@ -180,7 +180,7 @@ svg path, .navHome path {
 }
 
 #worldstateTabs svg path {
-  fill: <?=$color_active?>;
+  fill: <?=$color_title4?>;
 }
 
 .active {
@@ -635,6 +635,7 @@ svg.sortieFaction {
   height: 60px;
   width: 96px;
   margin: 3px;
+  opacity: .9;
 }
 
 .fissureTier {
@@ -651,13 +652,14 @@ svg.fissureTier path {
 #alertItems {
   height: 16px;
   margin: -2px 2px;
+  opacity: .8;
 }
 
 .alertFaction {
   float: right;
   height: 58px;
   margin: auto 10px;
-  opacity: .2;
+  opacity: .1;
   width: 58px;
 }
 
