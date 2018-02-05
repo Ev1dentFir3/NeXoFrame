@@ -30,8 +30,13 @@
   background: <?=$color_primary?>;
 }
 
+::selection {
+  color: <?=$color_active?>;
+  background: <?=$color_title3?>;
+}
+
 body {
-  background-color: <?=$color_background3?>;
+  background-color: <?=$color_background4?>;
   color: <?=$color_primary?>;
   margin: 50px 0 0 0;
   padding: 0;

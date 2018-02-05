@@ -555,7 +555,7 @@ function updateAlerts() {
           alertRow += `</li>`;
           alertRow += `</ul>`;
 
-          alertRow += `<img class="svg alertFaction" src="img/factions/${alert.mission.faction}.svg">`;
+          alertRow += `<img class="svg alertFaction" src="img/factions/` + getFactionKey(alert.mission.faction) +  `.svg">`;
           alertRow += `</div>`;
 
           alertRow += `<span id="alerttimer${alert.id}" class="timer alertTimer" data-starttime="${moment(alert.activation).unix()}" ` +
@@ -720,7 +720,7 @@ function updateFissure() {
         fissureRow += `</li>`;
         fissureRow += `</ul>`;
 
-        fissureRow += `<img class="svg alertFaction" src="img/factions/${fissure.enemy}.svg">`;
+        fissureRow += `<img class="svg alertFaction" src="img/factions/` + getFactionKey(fissure.enemy) + `.svg">`;
         fissureRow += `</div>`;
         fissureRow += `<span id="fissuretimer${fissure.id}" class="timer fissureTimer" data-starttime="${moment(fissure.activation).unix()}" ` +
                       `data-endtime="${moment(fissure.expiry).unix()}"></span>`;

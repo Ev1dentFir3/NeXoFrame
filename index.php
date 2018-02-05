@@ -218,9 +218,11 @@ if (file_exists('includes/themes/'.$theme.'/theme.php')) {
 
 <!-- Moment CDN -->
 <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/moment.min.js"></script>
+<!-- IE Polyfills -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.15/browser-polyfill.min.js"></script>
 
 <!-- required js for page -->
-<script src="js/main.php" rel="javascript" type="text/javascript">></script>
+<script src="js/main.php" rel="javascript" type="text/javascript"></script>
 <script src="js/svg-injector.min.js"></script>
 
 <!-- nexoframe stuff -->

@@ -5,8 +5,8 @@ $theme_description="A look into the past";
 $theme_author="NeXoGone";
 
 //Colors
-$color_primary="rgba(194,51,204,1)";
-$color_secondary="rgba(205,66,215,1)";
+$color_primary="rgba(182,77,203,1)";
+$color_secondary="rgba(224,99,233,1)";
 $color_select="rgba(48,0,51,.6)";
 $color_title1="rgba(147,22,156,1)";
 $color_title2="rgba(136,36,143,1)";
